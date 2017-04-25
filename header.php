@@ -45,6 +45,11 @@ $lang = get_locale();
         <p class="browsehappy">[!] Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités du site internet. [!]<br /><a href="http://browsehappy.com/">Découvrez comment mettre votre navigateur à jour</a></p><![endif]-->
 	<div class="layout" id="top">
 		<header class="hero-banner" role="banner">
+			<video autoplay loop muted poster="<?php echo AKSVB_DIR_URI; ?>/assets/images/lion-dance.jpg">
+				<source src="<?php echo AKSVB_DIR_URI; ?>/assets/videos/lion.mp4" type="video/mp4">
+				<source src="<?php echo AKSVB_DIR_URI; ?>/assets/videos/lion.webm" type="video/webm">
+				<source src="<?php echo AKSVB_DIR_URI; ?>/assets/videos/lion.ogv" type="video/ogv">
+			</video>
 			<div class="container">
 				<p class="hb-logo">
 					<?php
