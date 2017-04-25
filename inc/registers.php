@@ -2,6 +2,14 @@
 defined( 'ABSPATH' ) or die( 'Cheatin\' uh?' );
 
 /**
+ * Register text domain
+ */
+add_action( 'after_setup_theme', 'aksvb_theme_local' );
+function aksvb_theme_local(){
+	load_theme_textdomain( 'aksvb', get_template_directory() . '/languages' );
+}
+
+/**
  * Registering main menu
  */
 register_nav_menu( 'main_navigation', __( 'The main top header menu', 'aksvb' ) );
