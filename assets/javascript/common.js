@@ -239,4 +239,14 @@ $(document).ready(function()
         autoWidth:false,
         mergeFit:false
     });
+
+    /**
+     * On esc pres, stop the video in header
+     */
+    $( document ).on('keypress', function(e) {
+        if ( e.keyCode === 27 ) {
+            var video = $('.hero-banner video').get(0);
+            video.paused ? video.play() : video.pause();
+        }
+    });
 });
