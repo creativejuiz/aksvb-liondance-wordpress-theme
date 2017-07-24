@@ -83,7 +83,7 @@ $lang = get_locale();
 						<?php if ( $lang == 'fr_FR' ) { ?>
 							En apprendre plus
 						<?php } else { ?>
-							Watch the video
+							Learn More
 						<?php } ?>
 					</a>
 				</p>

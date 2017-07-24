@@ -1,7 +1,5 @@
 <?php defined( 'ABSPATH' ) or die( 'Cheatin\' uh?' ); ?>
 
-		<div class="maps" id="gmaps"></div>
-
 		<div class="footer" role="contentinfo">
 			<div id="contact" class="headline-container">
 				<div class="headline">
@@ -49,26 +47,29 @@
 			</div><!-- .contact -->
 				
 			
+			<?php
+			$optsuffix = defined( 'ICL_LANGUAGE_CODE' ) && ICL_LANGUAGE_CODE !== 'fr' ? '_' . ICL_LANGUAGE_CODE : '';
+			?>
 			<div class="informations">
 				<noscript>
 					<div class="grid-container line acenter">
 						<div class="grid-100">
-							<?php echo get_aksvb_option( 'training_locations' ); ?>
+							<?php echo get_aksvb_option( 'training_locations' . $optsuffix ); ?>
 						</div>
 					</div>
 				</noscript>
 				<div class="grid-container line">
 					<div class="grid-25 suffix-5 prefix-20 tablet-grid-35 tablet-suffix-5 tablet-prefix-10">
-						<?php echo get_aksvb_option( 'contact_1' ); ?>
+						<?php echo get_aksvb_option( 'contact_1' . $optsuffix ); ?>
 					</div>
 					<div class="grid-30 prefix-5 suffix-15 tablet-grid-40 tablet-prefix-5 tablet-suffix-5">
-						<?php echo get_aksvb_option( 'contact_2' ); ?>
+						<?php echo get_aksvb_option( 'contact_2' . $optsuffix ); ?>
 					</div>
 				</div><!-- .line -->
 
 				<div class="grid-container line">
 					<div class="grid-25 suffix-5 prefix-20 tablet-grid-35 tablet-suffix-5 tablet-prefix-10">
-						<?php echo get_aksvb_option( 'hq' ); ?>
+						<?php echo get_aksvb_option( 'hq' . $optsuffix ); ?>
 					</div>
 
 					<div class="grid-30 prefix-5 suffix-15 tablet-grid-35 tablet-prefix-5 tablet-suffix-10">
@@ -100,9 +101,6 @@
 
 	<script>
 		Modernizr.mq('only all') || document.write('<script src="<?php echo AKSVB_THEME_JS; ?>vendor/respond.min.js"><\/script>');
-	</script>
-
-	<script>
 		Modernizr.input.placeholder || document.write('<script src="<?php echo AKSVB_THEME_JS; ?>vendor/jquery.placeholder.js"><\/script>');
 	</script>
 

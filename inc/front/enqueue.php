@@ -26,6 +26,6 @@ function aksvb_enqueue() {
 	wp_enqueue_script( 'aksvb-common', AKSVB_THEME_JS . 'common.js', array('aksvb-jquery'), AKSVB_THEME_VERSION, true );
 
 	// Load main CSS
-	//wp_enqueue_style('aksvb-googlefont', 'http://fonts.googleapis.com/css?family=Oswald:300,700%7CKaushan+Script', array(), AKSVB_THEME_VERSION, 'all' );
+	wp_enqueue_style('aksvb-googlefont', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700%7CKaushan+Script', array(), AKSVB_THEME_VERSION, 'all' );
 	wp_enqueue_style('aksvb-css', AKSVB_THEME_CSS . 'responsive.css', array(), AKSVB_THEME_VERSION, 'all' );
 }
